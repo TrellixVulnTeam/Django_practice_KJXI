@@ -1,0 +1,143 @@
+{% extends "ostacor/header.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<!-- Jumbotron Start-->
+<div class="text-center banner">
+    <div class="gradient">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Hey Welcome to <span class="logo_jubotron">Food Locus!</span></h1>
+            <p>We are food enthusiast. <br>You can find your lovely food recipies here.<br> Also you can write your own recipies.</p>
+            <p><a href="#" target="_blank" class="btn btn-primary" role="button" >Food Recipies</a>
+            <a href="#" target="_blank" class="btn btn-success" role="button">Submit Recipies</a></p>
+        </div>
+    </div>
+</div>
+<!-- Jumbotron Ends-->
+
+
+<div class="container"> 
+    <!-- latest_story Section Start -->
+    <div class="story_view"> 
+
+        <div class="story_view-style">
+            <span class="story_view-label"   >
+                    Latest Recipies
+            </span>
+            <span class="line"></span>
+        </div>
+        <div class="latest_story_view">
+            <section class="latest_story_view-box">
+                <div class="row">
+                    {% for a in one_title %}
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col">
+                        <div class="item">
+                            <img src="{{a.cover_img_src}}" alt="about" style="width:100%;" class="img-responsive">
+                            <div class="item-layer"></div>
+                            <div class="text-block">
+                                <h5> <a href="#"><span>{{a.one_title}}</span></a> </h5>
+                                <div class="inner-contant">
+                                <p>{{ a.one_liner_desc}}...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+
+        <h5 class="more text-center">
+            <a href="javascript:void(0)">More in latest recipies...</a>
+        </h5>
+    </div>
+
+    <!-- latest_story Section Ends -->
+
+    <!-- food locus recipies start-->
+    <div class="row food_locus_wrapper">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 food_locus_part col">
+            <div class="story_view">
+                <div class="story_view-style">
+                    <span class="story_view-label"   >
+                            Food Locus Recipies
+                    </span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <section class="food_locus_story">
+                {% for a in food_locus_one_title %}
+                <div class =" row">
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col">
+                        <div class="food_locus_item">
+                            <img src="{{a.cover_img_src}}" alt="{{a.one_title}}" class="img-reponsive">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-ms-8  col-sm-8 col-xs-12 col">
+                        <div class="food_locus_story_title">
+                            <h4>{{ a.one_title}}</h4>
+                            <p>
+                                {{ a.one_liner}}...
+                            </p>
+                        </div>
+                    </div>
+                   
+                </div>
+                {% endfor %}
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 food-social-part"> 
+            <div class="story_view">
+                <div class="story_view-style">
+                    <span class="story_view-label"   >
+                        Follow as on
+                    </span>
+                    <span class="line"></span>
+                </div>
+            </div> 
+            <section class="social-media-sticky-wrapper">
+                <ul class="social-media-sticky-icons">
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- food locus recipies ends-->
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'ostacor/footer.html' %}
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'ostacor/write_story_style.css'%}" rel="stylesheet">
+</head>
+<body>
+    <div class="icon-bar">
+        <a href="javascript:void(0)" class="image-file" onclick="open_image_upload_div()"><i class="fa fa-file-image-o" aria-hidden="true"></i></a> 
+        <a href="javascript:void(0)" class="text-part" onclick="create_text_area()"><i class="fa fa-font" aria-hidden="true"></i></a> 
+        <a href="javascript:void(0)" class="video-file" onclick="open_video_upload_div()"><i class="fa fa-file-video-o" aria-hidden="true"></i></a> 
+    </div>
+    <!-- <div class="create_story_header_wrapper">
+        <div class="create-story-header">
+            <button class="btn btn-primary" type="submit"> Submit </button>
+        </div>
+    </div> -->
+
+    <div class="container-fluid container-width">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                        <form class="story_main_tag" method="post" action="/ostacor/submit_story/">
+                            {% csrf_token %}
+                            <div class="input-container">
+                                <div class="input-wrapper lc_count">
+                                    <input type="text" name="Story_Tilte" class="input-style" placeholder="Title Here" required>
+                                    <span class="word-count">
+                                        0/100
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <div class="input-wrapper lc_count">
+                                    <input type="text" name="Story_One_liner" class="input-style" placeholder="One Liner" required>
+                                    <span class="word-count">
+                                        0/250
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="input-container" id="all-fileds">
+                            </div>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col">
+                <div class="img-snap-conatiner" id="image_spansort">
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script src="{% static 'js/writestory_script.js' %}"></script>
+</body>
+</html>

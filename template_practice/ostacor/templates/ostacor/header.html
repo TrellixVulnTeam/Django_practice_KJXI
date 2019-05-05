@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="ostacor">
+        <meta name="keywords" content="HTML,CSS,JavaScript,jquery">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'ostacor/bootstrap.min.css'%}">
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'ostacor/font-awesome.min.css'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ostacor/main.css'%}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        
+        <title>{% block title %} Title here {% endblock %}</title>
+        <link rel="icon" type="image/jpg" href="../../static/images/home-icon-title.png" />
+                
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand logo" href="/ostacor/">Food Locus</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <!-- Nav links -->
+                    {% if page %}
+                    <ul class="nav navbar-nav navbar navsep">
+                        {% for p in  page %}
+                    <li><a href="/ostacor/{{ p.page_name }}">{{ p.head_menu_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="javascript:void(0)">login
+                            <i class="  fa fa-user" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Signup </a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+        </nav>
+
+        {% block body%}
+        {% endblock %}
+        {% block footer %}
+        {% endblock %}
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    </body>
+</html>

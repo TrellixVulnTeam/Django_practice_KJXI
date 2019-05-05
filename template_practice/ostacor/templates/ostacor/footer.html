@@ -1,0 +1,32 @@
+<footer class="footer_container">
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="logo">
+                        <h3>
+                            Food Locus
+                        </h3>
+                </div>
+                <div class="col-lg-6 col-md-6 -col-sm-6 col-xs-6 col">
+                    {% if page %}
+                    <ul class="footer-useful-links">
+                        {% for p in  page %}
+                        <li><a href="/ostacor/{{ p.page_name }}">{{ p.page_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="footer-newsletter-wrapper">
+                        <h4>
+                            Intrested? <span>Subscribe for Newsletter </span>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            <input type="email" placeholder="Email Id">
+                            <button class="btn btn-primary">Submit</button>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

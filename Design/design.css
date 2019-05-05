@@ -1,0 +1,61 @@
+body,a,h1,h2,h3,h4,h5,h6,li,ul,ol{
+	padding: 0px;margin:0px;list-style: none;outline: none;text-transform: none;color: #000;
+}
+
+.home-top-header-wrapper{
+	background-color: #333;
+	margin: 0px;
+	padding: 0px;
+}
+
+.home-top-header-wrapper > .container{
+	width: 80%;
+	margin: auto;
+}
+.home-top-header-wrapper >.container>.home-top-header-primary-left{
+	display: inline-block;
+	width: 50%;
+}
+
+.home-top-header-wrapper > .container> .home-top-header-primary-left >.home-top-header-social-icon{
+	display: block;
+	list-style: none;
+	margin:10px 0px;
+	padding: 0px;
+}
+.home-top-header-wrapper > .container> .home-top-header-primary-left >.home-top-header-social-icon>li{
+	display: inline-block;
+	margin-left: 18px;
+
+}
+.home-top-header-wrapper > .container> .home-top-header-primary-left >.home-top-header-social-icon>li>a{
+	padding: 0px;
+	margin:0px;
+	display:inline-block;
+	outline: 0px;
+}
+.home-top-header-wrapper > .container> .home-top-header-primary-left >.home-top-header-social-icon>li>a>:hover{
+	color: #92632a;
+	outline: 0px;
+	transition: all 200ms linear;
+}
+.home-top-header-wrapper > .container> .home-top-header-primary-left >.home-top-header-social-icon>li>a>i{
+	color: #fff;
+}
+.home-top-header-wrapper >.container>.home-top-header-primary-right{
+	display: inline-block;
+	width: 48%;
+	float: right;
+}
+.home-top-header-wrapper >.container>.home-top-header-primary-right > ul{
+	list-style: none;margin:10px 0px;
+}
+.home-top-header-wrapper >.container>.home-top-header-primary-right > ul> li{
+	display: inline-block;
+}
+.home-top-header-wrapper >.container>.home-top-header-primary-right > ul> li> a{
+	display: inline-block; 
+	margin-left: 20px; 
+	color: #fff;
+	float: left;
+}
