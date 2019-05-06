@@ -1,0 +1,111 @@
+{% if entertainment_category %}
+
+<div class="base-conatiner-wrapper">
+    <div class="row">
+        <div class="col-lg-12 category-wrapper">
+            <div class="category-name">
+                <h2>
+                    {{entertainment_category.0.category_name}}
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row  category-content-wrapper">
+            <!-- category title-->
+            <!-- category title ends-->
+
+            <div class="col-lg-8 category-primary-content">
+                <div class="category-content-tumbnail">
+                    <div class="category-content-img">
+                        <a href="{% url 'blog:storypage' %}">
+                            <div class='content-base-img'>
+                                <img  class="img-thumbnail" src="{{entertainment_category.0.story_base_image}}" alt="{{entertainment_category.0.story_base_image_name}}" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-content-contents">
+                    <div class="story-title-wrapper">
+                        <h3 class="title-wrapper">
+                            <a href="javascript:void(0);">
+                                {{entertainment_category.0.story_heading}}
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="story-meta-wrapper">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item story-writer-name">
+                                <span>By </span>
+                                <span> <a href ="javascript:void(0);"> {{entertainment_category.0.story_writter_name}} </a></span>
+                            </li>
+                            <li class="list-inline-item story-datetime">
+                                <span>{{entertainment_category.0.story_publish_date|date:"d-M-Y"}} </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 category-secondary-content-wrapper" >
+                <div class="category-secondary-content">
+                    <div class='content-side-img'>
+                        <a href="javascript:void(0)">
+                            <img  class="img-thumbnail" src="{{entertainment_category.1.story_base_image}}" alt="{{entertainment_category.1.story_base_image_name}}" />
+                        </a>
+                    </div>
+                    <div class="category-content-contents">
+                        <div class="story-title-wrapper">
+                            <h5 class="title-wrapper">
+                                <a href="javascript:void(0)">
+                                    {{entertainment_category.1.story_heading}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="story-meta-wrapper">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item story-writer-name">
+                                    <span>By </span>
+                                    <span> <a href="javascript:void(0);" >  {{entertainment_category.1.story_writter_name}} </a> </span>
+                                </li>
+                                <li class="list-inline-item story-datetime">
+                                    <span> {{entertainment_category.1.story_publish_date|date:"d-M-Y"}}  </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-secondary-content">
+                    <div class='content-side-img'>
+                        <a href="javascript:void(0)">
+                            <img  class="img-thumbnail" src=" {{entertainment_category.2.story_base_image}}" alt="{{entertainment_category.2.story_base_image_name}}" />
+                        </a>
+                    </div>
+                    <div class="category-content-contents">
+                        <div class="story-title-wrapper">
+                            <h5 class="title-wrapper">
+                                <a href="javascript:void(0)">
+                                      {{entertainment_category.2.story_heading}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="story-meta-wrapper">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item story-writer-name">
+                                    <span>By </span>
+                                    <span> <a href="javascript:void(0);" > {{entertainment_category.2.story_writter_name}} </a> </span>
+                                </li>
+                                <li class="list-inline-item story-datetime">
+                                    <span>{{entertainment_category.2.story_publish_date|date:"d-M-Y"}} </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+{% else %}
+<p> No entertainment stories<p>
+
+{% endif %}

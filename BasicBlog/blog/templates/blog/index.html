@@ -22,6 +22,7 @@
             </div>
                 <!-- jumbotron ends -->
             <div class="container">
+              <!-- Recent stories container -->
                 <div class="base-conatiner-wrapper">
                     <div class="row">
                         <div class="col-lg-12 category-wrapper">
@@ -33,206 +34,13 @@
                         </div>
                     </div>
 
-                    <div class="row  category-content-wrapper">
-                        <!-- category title-->
-                        <!-- category title ends-->
-                    {% if recent_stories  %}
-                        <div class="col-lg-8 category-primary-content">
-                            <div class="category-content-tumbnail">
-                                <div class="category-content-img">
-                                    <a href="javascript:void(0);">
-                                        <div class='content-base-img'>
-                                            <img  class="img-thumbnail" src="{{ recent_stories.0.story_base_image }}" alt="emawatson" />
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="category-content-contents">
-                                <div class="story-title-wrapper">
-                                    <h3 class="title-wrapper">
-                                        <a href="javascript:void(0);">
-                                            {{ recent_stories.0.story_heading }}
-                                        </a>
-                                    </h3>
-                                </div>
-
-                                <div class="story-meta-wrapper">
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item story-writer-name">
-                                            <span>By </span>
-                                            <span> <a href ="javascript:void(0);"> {{ recent_stories.0.story_writter_name }} </a></span>
-                                        </li>
-                                        <li class="list-inline-item story-datetime">
-                                            <span> {{ recent_stories.0.story_publish_date|date:"d-M-Y" }}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 category-secondary-content-wrapper" >
-                            <div class="category-secondary-content">
-                                <div class='content-side-img'>
-                                    <a href="javascript:void(0)">
-                                        <img  class="img-thumbnail" src="{{ recent_stories.1.story_base_image }}" alt="" />
-                                    </a>
-                                </div>
-                                <div class="category-content-contents">
-                                    <div class="story-title-wrapper">
-                                        <h5 class="title-wrapper">
-                                            <a href="javascript:void(0)">
-                                                {{ recent_stories.1.story_heading }}
-                                            </a>
-                                        </h5>
-                                    </div>
-                                    <div class="story-meta-wrapper">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item story-writer-name">
-                                                <span>By </span>
-                                                <span> <a href="javascript:void(0);" > {{ recent_stories.1.story_writter_name }}</a> </span>
-                                            </li>
-                                            <li class="list-inline-item story-datetime">
-                                                <span> {{ recent_stories.1.story_publish_date|date:"d-M-Y" }}</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="category-secondary-content">
-                                <div class='content-side-img'>
-                                    <a href="javascript:void(0)">
-                                        <img  class="img-thumbnail" src="{{ recent_stories.2.story_base_image }}" alt="" />
-                                    </a>
-                                </div>
-                                <div class="category-content-contents">
-                                    <div class="story-title-wrapper">
-                                        <h5 class="title-wrapper">
-                                            <a href="javascript:void(0)">
-                                                {{ recent_stories.2.story_heading }}
-                                            </a>
-                                        </h5>
-                                    </div>
-                                    <div class="story-meta-wrapper">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item story-writer-name">
-                                                <span>By </span>
-                                                <span> <a href="javascript:void(0);" > {{ recent_stories.2.story_writter_name }}</a> </span>
-                                            </li>
-                                            <li class="list-inline-item story-datetime">
-                                                <span> {{ recent_stories.2.story_publish_date|date:"d-M-Y" }}</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                    </div>
+                  {% include "blog/recent_view.html" %}
                 </div>
-                <div class="base-conatiner-wrapper">
-                    <div class="row">
-                        <div class="col-lg-12 category-wrapper">
-                            <div class="category-name">
-                                <h2>
-                                    Entertainment
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row  category-content-wrapper">
-                            <!-- category title-->
-                            <!-- category title ends-->
+              <!-- Category stories coatiner -->
+                {% include 'blog/entertainment_view.html'%}
 
-                            <div class="col-lg-8 category-primary-content">
-                                <div class="category-content-tumbnail">
-                                    <div class="category-content-img">
-                                        <a href="javascript:void(0);">
-                                            <div class='content-base-img'>
-                                                <img  class="img-thumbnail" src="http://images.catchnews.com/upload/2016/05/26/radhika-apte-beautiful-phobia-ians-main_730x419.jpeg" alt="" />
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="category-content-contents">
-                                    <div class="story-title-wrapper">
-                                        <h3 class="title-wrapper">
-                                            <a href="javascript:void(0);">
-                                                Ranveer goes super dark for wedding reception dinner in Mumbai
-                                            </a>
-                                        </h3>
-                                    </div>
 
-                                    <div class="story-meta-wrapper">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item story-writer-name">
-                                                <span>By </span>
-                                                <span> <a href ="javascript:void(0);"> Bharat Choubey </a></span>
-                                            </li>
-                                            <li class="list-inline-item story-datetime">
-                                                <span> 25-Nov-2018</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 category-secondary-content-wrapper" >
-                                <div class="category-secondary-content">
-                                    <div class='content-side-img'>
-                                        <a href="javascript:void(0)">
-                                            <img  class="img-thumbnail" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201806/home-deepika-main.jpeg?G3pkMd_D.j7WKwNi7ijMOCq6GNvEsszN" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="category-content-contents">
-                                        <div class="story-title-wrapper">
-                                            <h5 class="title-wrapper">
-                                                <a href="javascript:void(0)">
-                                                    Ranveer goes super dark for wedding reception dinner in Mumbai
-                                                </a>
-                                            </h5>
-                                        </div>
-                                        <div class="story-meta-wrapper">
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item story-writer-name">
-                                                    <span>By </span>
-                                                    <span> <a href="javascript:void(0);" > Bharat Choubey </a> </span>
-                                                </li>
-                                                <li class="list-inline-item story-datetime">
-                                                    <span> 25-Nov-2018</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="category-secondary-content">
-                                    <div class='content-side-img'>
-                                        <a href="javascript:void(0)">
-                                            <img  class="img-thumbnail" src="http://www.forbesindia.com/media/images/2017/Dec/img_102053_bg_virat.jpg" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="category-content-contents">
-                                        <div class="story-title-wrapper">
-                                            <h5 class="title-wrapper">
-                                                <a href="javascript:void(0)">
-                                                    Ranveer goes super dark for wedding reception dinner in Mumbai
-                                                </a>
-                                            </h5>
-                                        </div>
-                                        <div class="story-meta-wrapper">
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item story-writer-name">
-                                                    <span>By </span>
-                                                    <span> <a href="javascript:void(0);" > Bharat Choubey </a> </span>
-                                                </li>
-                                                <li class="list-inline-item story-datetime">
-                                                    <span> 25-Nov-2018</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
                 <div class="base-conatiner-Repeat-wrapper">
                     <div class="row">
                         <div class="col-lg-12 category-wrapper">

@@ -1,6 +1,9 @@
 {% extends 'blog/base.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %}  {% endblock %}
 
-{% block content %} 
+{% block content %}
+{% if data %}
+  <h1>{{data}}</h1>
+{% endif %}
 {% endblock %}
